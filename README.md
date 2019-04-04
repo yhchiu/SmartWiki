@@ -2,16 +2,13 @@
 SmartWiki是一款针对IT团队开发的简单好用的文档管理系统。
 可以用来储存日常接口文档，数据库字典，手册说明等文档。内置项目管理，用户管理，权限管理等功能，能够满足大部分中小团队的文档管理需求。
 
-## 在线演示
-
-演示地址： [https://www.iminho.me](https://www.iminho.me)
-账号密码： test123@test123
-该演示账号移除了项目创建功能。
-QQ交流群： [190317359](//shang.qq.com/wpa/qunwpa?idkey=9a04393e101664709ed559e890b08fbfee5cac6979b027fe25fb44088bf52f12)
-
 ## 安装与部署
 
-安装教程请参见使用手册：[https://wiki.iminho.me/docs/show/1](https://wiki.iminho.me/docs/show/1)
+```
+cp .env.example .env
+php artisan key:generate
+php artisan smartwiki:install --account=user --password=pass --email=mail@mail.com --dbHost=localhost --dbName=dbname --dbUser=user --dbPassword=pass
+```
 
 ## SmartWiki迁移
 
@@ -87,6 +84,8 @@ Dockerfile 文件请参考 [https://github.com/lifei6671/docker-smartwiki](https
 一个纯粹的PHPer。[SmartWiki 演示文档](https://wiki.iminho.me)
 
 
+## 删除线使用了第三方库，但是因为我实在是composer装不上所以直接合并进项目了
+[原项目](https://github.com/uafrica/commonmark-ext)
 
 
 

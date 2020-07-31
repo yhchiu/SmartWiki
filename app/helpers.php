@@ -257,6 +257,7 @@ if(!function_exists('markdown_converter')) {
         $environment = League\CommonMark\Environment::createCommonMarkEnvironment();
         $environment->addExtension(new Webuni\CommonMark\TableExtension\TableExtension());
         $environment->addExtension(new Webuni\CommonMark\AttributesExtension\AttributesExtension());
+        $environment->addExtension(new SmartWiki\Extentions\Strikethrough\StrikethroughExtension());
 
         $environment->addBlockParser(new HttpMethodParser());
         $environment->addInlineParser(new AutoLinkParser());
